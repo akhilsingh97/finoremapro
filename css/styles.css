@@ -1,0 +1,237 @@
+
+div {
+	clear: both;
+	margin: 0 50px;
+}
+
+
+.text-box
+{
+box-shadow:1px 1px 45px #333;
+transition: 200ms all ease;
+border:none;
+padding: 5px 5px;
+width:35%;
+
+font-size: 40px;
+margin-left:34%;
+margin-top:6%;
+font-family:"Lato", Calibri, Arial, sans-serif;
+color: #DDD;
+background: #2D3538;
+text-align: center;
+
+}
+
+
+.question {
+    color: #5FB4BF;
+    font-family: "Montserrat","Helvetica Neue",sans serif;
+    position: relative;
+    padding: 0;
+    cursor: default;
+    padding-left: 50px;
+    line-height: 140%;
+    text-align: left;
+    font-size: 24px;
+    margin-left: 30%;
+    -webkit-touch-callout: text;
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
+.match {
+    color: #5FB4BF;
+    font-family: "Montserrat","Helvetica Neue",sans serif;
+    position: relative;
+
+    line-height: 140%;
+
+    font-size: 32px;
+    text-align: center;
+		margin-top: 9%;
+		margin-bottom:-1%;
+
+}
+
+.ans {
+	color: #5FB4BF;
+	font-family: "Montserrat","Helvetica Neue",sans serif;
+	position: relative;
+
+
+	line-height: 140%;
+
+	font-size: 22px;
+	text-align:center;
+	margin-top : 7%;
+}
+
+.ans1 {
+	color: #5FB4BF;
+	font-family: "Montserrat","Helvetica Neue",sans serif;
+	position: relative;
+
+
+	line-height: 140%;
+
+	font-size: 22px;
+	margin-left: 36%;
+	margin-top : 7%;
+}
+
+.ans5 {
+	color: #5FB4BF;
+	font-family: "Montserrat","Helvetica Neue",sans serif;
+	position: relative;
+
+
+	line-height: 140%;
+
+	font-size: 22px;
+	margin-left : 31%;
+	margin-top : 7%;
+}
+
+
+
+.text{
+  font-family:"Lato", Calibri, Arial, sans-serif;
+  font-size: 23px;
+  margin-left:37%;
+  margin-top:10%;
+}
+label {
+  width: 220px;
+  border-radius: 3px;
+  border: 1px solid #D1D3D4
+}
+
+.background{
+  position: absolute;
+height: 100%;
+width: 100%;
+top: 0;
+background-color: #ffffff;
+}
+/* hide input */
+input.radio:empty {
+	margin-left: -999px;
+}
+
+
+.heading1{
+	position: relative;
+    float: left;
+    line-height: 2.5em;
+    text-indent: 3.25em;
+    margin-top: 1em;
+    margin-left: 1%;
+}
+
+/* style label */
+input.radio:empty ~ label {
+	position: relative;
+	float: left;
+	line-height: 2.5em;
+	text-indent: 3.25em;
+	margin-top: 2em;
+  margin-left: 35%;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+input.radio:empty ~ label:before {
+	position: absolute;
+	display: block;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	content: '';
+	width: 2.5em;
+	background: #D1D3D4;
+	border-radius: 3px 0 0 3px;
+}
+
+input.radios:empty ~ label {
+	position: relative;
+	float: left;
+	line-height: 2.5em;
+	text-indent: 3.25em;
+	margin-top: 2em;
+  margin-left: 35%;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+input.radios:empty ~ label:before {
+	position: absolute;
+	display: block;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	content: '';
+	width: 2.5em;
+	background: #9CE2AE;
+	border-radius: 3px 0 0 3px;
+}
+
+/* toggle hover */
+input.radio:hover:not(:checked) ~ label:before {
+	content:'\2714';
+	text-indent: .9em;
+	color: #C2C2C2;
+}
+
+input.radio:hover:not(:checked) ~ label {
+	color: #888;
+}
+
+/* toggle on */
+input.radio:checked ~ label {
+	content:'\2714';
+
+	color: #9CE2AE;
+
+}
+
+input.radio:checked ~ label {
+	color: #777;
+}
+
+
+
+
+input.radios:hover:not(:checked) ~ label:before {
+	content:'\2714';
+	text-indent: .9em;
+	color: #C2C2C2;
+}
+
+input.radios:hover:not(:checked) ~ label {
+	color: #888;
+}
+
+/* toggle on */
+input.radios:checked ~ label {
+	content:'\2714';
+
+	color: #9CE2AE;
+
+}
+
+input.radios:checked ~ label {
+	color: #777;
+}
+input.radios:empty {
+	margin-left: -999px;
+}
