@@ -9,28 +9,36 @@
 
 </head>
 
-<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
-<script src="js/jquery.clickBubble.min.js"></script>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <script type="text/javascript" src="fusioncharts-suite-xt/js/fusioncharts.js"></script>
 <script type="text/javascript" src="fusioncharts-suite-xt/js/angular-fusioncharts.js"></script>
 
-<body>
+<body background="background.jpg" style="background-repeat:no-repeat;height:100%;background-attachment: fixed;-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;">
+
+
 
   <div class="background" ng-app="myApp" ng-controller="myCtrl">
-<form name="formName">
+<form name="formName" >
+<div ng-show="ripple" class="circle one"></div>
+<div ng-show="IsVisible11" class="question" style="margin-top:8%; text-align:center"> A Cricket Geek?<br>Let's check your knowledge!! </div><br> <br>
+ <input ng-show="IsVisible8" type="text" class="text-box" name="name" ng-model="name" placeholder="Enter Your Name" required>
 
-<div class="question" style="margin-top:5%; padding-left:9%"> <strong>Hello</strong>. What's your name?<sup>*</sup> </div><br> <br>
- <input type="text" class="text-box" name="name" ng-model="name" placeholder="Enter Your Name" required>
-<span style="color:red" ng-show="formName.name.$touched && formName.name.$invalid">
-        Please Provide Your name</span>
+
 <br><br>
+<button class="question" style="margin-top:7%; padding-bottom:3px; background-color:rgba(182, 155, 76, 0.92); padding-left:12px;padding-right:12px; margin-left:48%" ng-show="formName.name.$valid && IsVisible7" ng-click="start()">Let's Play</button>
+<button ng-show="formName.name.$valid && IsVisible7" style="height: 15px;
+    margin-left: -4px;
+    width: 42px;
+    background-color: #004b80;">    </button>
 </form>
 
-<form name="form1" ng-show="formName.name.$valid && IsVisible1">
-<span class="question">{{ques1}}</span>
+<form name="form1" ng-show="IsVisible1">
+<div class="question">{{ques1}}</div>
 <br><br>
 <div><input type="radio" class="radio" id="radio1" name="ans1" ng-model="ans1" value="{{ans11}}" ng-click="ShowDiv2('Y')"><label for="radio1">{{ans11}}</label> <br></div>
 <div><input type="radio" class="radio" id="radio2" name="ans1" ng-model="ans1" value="{{ans12}}" ng-click="ShowDiv2('Y')"><label for="radio2">{{ans12}}</label> <br></div>
@@ -40,28 +48,28 @@
 </form>
 
 <form name= "form2" ng-show="IsVisible2">
-<span class="question">{{ques2}}</span><br><br>
+<div class="question">{{ques2}}</div><br><br>
 <div><input type="radio" class="radio" id="radio4" name="ans2" ng-model="ans2" value="{{ans21}}" ng-click="ShowDiv3('Y')"><label for="radio4">{{ans21}}</label> <br></div>
 <div><input type="radio" class="radio" id="radio5" name="ans2" ng-model="ans2" value="{{ans22}}" ng-click="ShowDiv3('Y')"><label for="radio5">{{ans22}}</label> <br></div>
 <div><input type="radio" class="radio" id="radio6" name="ans2" ng-model="ans2" value="{{ans23}}" ng-click="ShowDiv3('Y')"><label for="radio6">{{ans23}}</label> <br>
 </div></form>
 
 <form name="form3" ng-show="IsVisible3">
-<span class="question">{{ques3}}</span><br><br>
+<div class="question">{{ques3}}</div><br><br>
 <div><input type="radio" class="radio" id="radio7" name="ans3" ng-model="ans3" value="{{ans31}}" ng-click="ShowDiv4('Y')"><label for="radio7">{{ans31}}</label> <br></div>
 <div><input type="radio" class="radio" id="radio8" name="ans3" ng-model="ans3" value="{{ans32}}" ng-click="ShowDiv4('Y')"><label for="radio8">{{ans32}}</label> <br></div>
 <div><input type="radio" class="radio" id="radio9" name="ans3" ng-model="ans3" value="{{ans33}}" ng-click="ShowDiv4('Y')"><label for="radio9">{{ans33}}</label> <br>
 </div></form>
 
 <form name="form4" ng-show="IsVisible4">
-<span class="question">{{ques4}}</span><br><br>
+<div class="question">{{ques4}}</div><br><br>
 <div><input type="radio" class="radio" id="radio10" name="ans4" ng-model="ans4" value="{{ans41}}" ng-click="ShowDiv5('Y')"><label for="radio10">{{ans41}}</label> <br></div>
 <div><input type="radio" class="radio" id="radio11" name="ans4" ng-model="ans4" value="{{ans42}}" ng-click="ShowDiv5('Y')"><label for="radio11">{{ans42}}</label> <br></div>
 <div><input type="radio" class="radio" id="radio12" name="ans4" ng-model="ans4" value="{{ans43}}" ng-click="ShowDiv5('Y')"><label for="radio12">{{ans43}}</label> <br>
 </div></form>
 
 <form name="form5" ng-show="IsVisible5">
-<span class="question">{{ques5}}</span><br><br>
+<div class="question">{{ques5}}</div><br><br>
 <div><input type="radio" class="radio" id="radio13" ng-model="ans5" value="{{ans51}}" ng-click="ClickDiv5('Y')"><label for="radio13">{{ans51}}</label> <br></div>
 <div><input type="radio" class="radio" id="radio14" ng-model="ans5" value="{{ans52}}" ng-click="ClickDiv5('Y')"><label for="radio14">{{ans52}}</label> <br></div>
 <div><input type="radio" class="radio" id="radio15" ng-model="ans5" value="{{ans53}}" ng-click="ClickDiv5('Y')"><label for="radio15">{{ans53}}</label> <br></div>
@@ -79,56 +87,59 @@
 ></fusioncharts>
 </span>
 
-<div ng-show="IsVisible6">
+<button class="question" style="margin-top:4%; margin-bottom:8%; padding-bottom:3px; background-color:rgba(182, 155, 76, 0.92); padding-left:12px;padding-right:12px; margin-left:44%" ng-show="IsVisible9" ng-click="ShowAns()">Show Answers</button>
+
+<div ng-show="IsVisible10">
   <div class="match"> Hi {{name}}! Match your answers </div><br>
   <div class="ans1">{{ques1}}</div><br>
 <br><br>
-  <div> <input type="radio" class="radios" id="radio2" ng-model="ans1" value="{{ans12}}"><label for="radio2">{{ans1}}</label></div>
+  <div> <input class="radios"  ><label >{{ans1}}</label></div>
   <span class="heading1">Your answer</span>
   <br><br><br>
 
-  <div><input type="radio" class="radios" id="radio2" ng-model="ans1" value="{{ans12}}"><label for="radio2">{{ans12}}</label> </div>
+  <div><input class="radios" ><label>{{ans12}}</label> </div>
   <span class="heading1">Correct answer</span>
 
   <br><br><br><br>
   <div class="ans">{{ques2}}</div><br>
 
-  <div><input type="radio" class="radios" id="radio5" ng-model="ans2" ><label for="radio5">{{ans2}}</label> </div>
+  <div><input  class="radios"  ><label>{{ans2}}</label> </div>
 <span class="heading1">Your answer</span>
 
-  <div><input type="radio" class="radios" id="radio5" ng-model="ans2"><label for="radio5">{{ans23}}</label></div>
+  <div><input class="radios" ><label>{{ans23}}</label></div>
   <span class="heading1">Correct answer</span>
 
   <br><br><br><br>
   <div class="ans">{{ques3}}</div><br>
 
-  <div><input type="radio" class="radios" id="radio7" ng-model="ans3" value="{{ans31}}" ><label for="radio7">{{ans3}}</label></div>
+  <div><input class="radios" ><label>{{ans3}}</label></div>
   <span class="heading1">Your answer</span>
 
-  <div><input type="radio" class="radios" id="radio7" ng-model="ans3" value="{{ans31}}" ><label for="radio7">{{ans31}}</label> </div>
+  <div><input class="radios" ><label>{{ans31}}</label> </div>
   <span class="heading1">Correct answer</span>
 
   <br><br><br><br>
   <div class="ans">{{ques4}}</div><br>
 
-  <div><input type="radio" class="radios" id="radio10" ng-model="ans4" value="{{ans41}}" ><label for="radio10">{{ans4}}</label> </div>
+  <div><input class="radios" ><label>{{ans4}}</label> </div>
   <span class="heading1">Your answer</span>
 
 
-  <div><input type="radio" class="radios" id="radio10" ng-model="ans4" value="{{ans41}}" ><label for="radio10">{{ans41}}</label></div>
+  <div><input class="radios" ><label>{{ans41}}</label></div>
   <span class="heading1">Correct answer</span>
 
   <br><br><br><br>
   <div class="ans5">{{ques5}}</div><br>
 
-  <div><input type="radio" class="radios" id="radio15" ng-model="ans5" value="{{ans53}}"><label for="radio15">{{ans5}}</label></div>
+  <div><input class="radios"><label >{{ans5}}</label></div>
   <span class="heading1">Your answer</span>
 
 
-  <div><input type="radio" class="radios" id="radio15" ng-model="ans5" value="{{ans53}}"><label for="radio15">{{ans53}}</label></div>
+  <div><input class="radios"><label>{{ans53}}</label></div>
   <span class="heading1">Correct answer</span>
 
   <br><br>
+  <div style="height:20px"></div>
 </div>
 
 </div>

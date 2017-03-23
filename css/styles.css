@@ -1,7 +1,38 @@
 
 div {
 	clear: both;
-	margin: 0 50px;
+	margin: 0 0px;
+}
+
+@keyframes circle {
+	from {
+		transform: scale(0)
+	}
+	to {
+		transform: scale(6)
+	}
+}
+.circle {
+  margin: 0 auto;
+  width: 300px;
+  height: 300px;
+  border: 20px solid #62d049;
+  border-radius: 50%;
+  position: absolute;
+  top: 5%;
+  left: 40%;
+}
+.one {
+  animation: circle 1s;
+}
+
+@keyframes circle {
+	from {
+		transform: scale(0)
+	}
+	to {
+		transform: scale(6)
+	}
 }
 
 
@@ -13,10 +44,10 @@ border:none;
 padding: 5px 5px;
 width:35%;
 
-font-size: 40px;
+font-size: 38px;
 margin-left:34%;
 margin-top:6%;
-font-family:"Lato", Calibri, Arial, sans-serif;
+font-family:"Montserrat","Helvetica Neue",sans serif;
 color: #DDD;
 background: #2D3538;
 text-align: center;
@@ -25,16 +56,16 @@ text-align: center;
 
 
 .question {
-    color: #5FB4BF;
+    color: #ddd;
     font-family: "Montserrat","Helvetica Neue",sans serif;
     position: relative;
     padding: 0;
     cursor: default;
-    padding-left: 50px;
+  text-align: center;
     line-height: 140%;
-    text-align: left;
+
     font-size: 24px;
-    margin-left: 30%;
+
     -webkit-touch-callout: text;
     -webkit-user-select: text;
     -khtml-user-select: text;
@@ -44,7 +75,7 @@ text-align: center;
 }
 
 .match {
-    color: #5FB4BF;
+    color: #ddd;
     font-family: "Montserrat","Helvetica Neue",sans serif;
     position: relative;
 
@@ -52,13 +83,13 @@ text-align: center;
 
     font-size: 32px;
     text-align: center;
-		margin-top: 9%;
+		margin-top: 0%;
 		margin-bottom:-1%;
 
 }
 
 .ans {
-	color: #5FB4BF;
+	color: #ddd;
 	font-family: "Montserrat","Helvetica Neue",sans serif;
 	position: relative;
 
@@ -71,7 +102,7 @@ text-align: center;
 }
 
 .ans1 {
-	color: #5FB4BF;
+	color: #ddd;
 	font-family: "Montserrat","Helvetica Neue",sans serif;
 	position: relative;
 
@@ -84,7 +115,7 @@ text-align: center;
 }
 
 .ans5 {
-	color: #5FB4BF;
+	color: #ddd;
 	font-family: "Montserrat","Helvetica Neue",sans serif;
 	position: relative;
 
@@ -105,7 +136,7 @@ text-align: center;
   margin-top:10%;
 }
 label {
-  width: 220px;
+  width: 30%;
   border-radius: 3px;
   border: 1px solid #D1D3D4
 }
@@ -115,7 +146,7 @@ label {
 height: 100%;
 width: 100%;
 top: 0;
-background-color: #ffffff;
+
 }
 /* hide input */
 input.radio:empty {
@@ -130,6 +161,7 @@ input.radio:empty {
     text-indent: 3.25em;
     margin-top: 1em;
     margin-left: 1%;
+		color:#ddd;
 }
 
 /* style label */
@@ -137,9 +169,11 @@ input.radio:empty ~ label {
 	position: relative;
 	float: left;
 	line-height: 2.5em;
-	text-indent: 3.25em;
+	text-indent: 8.25em;
 	margin-top: 2em;
   margin-left: 35%;
+	color: #ddd;
+	font-size: 17px;
 	cursor: pointer;
 	-webkit-user-select: none;
 	-moz-user-select: none;
@@ -163,10 +197,12 @@ input.radios:empty ~ label {
 	position: relative;
 	float: left;
 	line-height: 2.5em;
-	text-indent: 3.25em;
+	text-indent: 8.25em;
 	margin-top: 2em;
   margin-left: 35%;
 	cursor: pointer;
+	color: #ddd;
+	font-size: 17px;
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
@@ -181,7 +217,7 @@ input.radios:empty ~ label:before {
 	left: 0;
 	content: '';
 	width: 2.5em;
-	background: #9CE2AE;
+	background: #ddd;
 	border-radius: 3px 0 0 3px;
 }
 
@@ -189,7 +225,7 @@ input.radios:empty ~ label:before {
 input.radio:hover:not(:checked) ~ label:before {
 	content:'\2714';
 	text-indent: .9em;
-	color: #C2C2C2;
+	color: #ddd;
 }
 
 input.radio:hover:not(:checked) ~ label {
@@ -200,7 +236,7 @@ input.radio:hover:not(:checked) ~ label {
 input.radio:checked ~ label {
 	content:'\2714';
 
-	color: #9CE2AE;
+	color: #ddd;
 
 }
 
@@ -214,7 +250,7 @@ input.radio:checked ~ label {
 input.radios:hover:not(:checked) ~ label:before {
 	content:'\2714';
 	text-indent: .9em;
-	color: #C2C2C2;
+	color: #ddd;
 }
 
 input.radios:hover:not(:checked) ~ label {
@@ -230,7 +266,7 @@ input.radios:checked ~ label {
 }
 
 input.radios:checked ~ label {
-	color: #777;
+	color: #ddd;
 }
 input.radios:empty {
 	margin-left: -999px;
